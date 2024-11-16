@@ -11,7 +11,7 @@ pipeline {
             steps {
                 sh 'mvn clean:clean'
                 sh 'mvn dependency:copy-dependencies'
-                sh 'compiler:compile'
+                sh 'mvn compiler:compile'
             }
         }
         stage('Execute') {
